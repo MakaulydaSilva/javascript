@@ -1,11 +1,11 @@
-let num1 = prompt('Digite um número');
-let num2 = prompt('Digite outro número');
+let num1 = prompt("Digite um número:");
+let num2 = prompt("Digite outro número:");
 
 num1 = Number(num1);
 num2 = Number(num2);
 
-console.log(typeof num1);
-console.log(typeof num2);
+console.log(num1 + num2);
 
+const resultado = (num1 + num2);
 
-
+alert(`Este é o resultado: ${resultado}`);
