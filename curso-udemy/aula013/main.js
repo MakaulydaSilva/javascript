@@ -40,5 +40,5 @@ console.log(umaString.split(' ',3));
 
 console.log(umaString.toUpperCase());
 
-console.log(umaString.toLowerCase());
+console.log(umaString.toLowerCase())
 
