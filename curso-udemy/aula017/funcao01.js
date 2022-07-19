@@ -13,4 +13,4 @@ function soma(x = 1, y = 1) { //Fazendo isso você faz com que a função assuma
 const resultado = soma(4, 2);
 console.log(resultado);
 
-//Declaração classica de funçãovb vbb bbc v m
+//Declaração classica de função
