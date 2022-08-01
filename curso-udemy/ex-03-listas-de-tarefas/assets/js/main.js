@@ -35,6 +35,7 @@ function criaTarefa(textoInput) {  // Função para juntar os lis com o texto na
    tarefas.appendChild(li); //Ligando o a variavel li que sera criada com a classe tarefas
    limpaInput(); // Chamando a função para limpar o input 
    criaBotaoApagar(li); // Chama o botao criado para o texto
+   salvarTarefas(); // Função que salva a tarefa no localStorage
 
 }
 
@@ -48,6 +49,34 @@ document.addEventListener('click', function(e) {
    if (el.classList.contains('apagar')) {
     //console.log(el.parentElement); >>   Verifica quem é o pai do elemento
     el.parentElement.remove(); // Do seu elemento selecionado (apagar) o pai dele será removido, logo ele também (aqui o elemento pai sera as lis criadas)
+    salvarTarefas();
+
    }
 });
+
+function salvarTarefas() {
+    const liTarefas = tarefas.querySelectorAll('li');
+    const listaDeTarefas = [];
+
+    for (let tarefa of liTarefas) {
+        let tarefaTexto = tarefa.innerText;
+        tarefaTexto = tarefaTexto.replace('Apagar', '').trim(); // Tira a palavra apagar para executar somente os textos das tarefas / .trim tira o espaco que sobra dos elementos do array
+        listaDeTarefas.push(tarefaTexto); // Coloco os textos dentro do array === (listaDeTarefas)
+       
+    }
+
+    const tarefasJSON = JSON.stringify(listaDeTarefas); // Array de listaDeTarefas foi transformado em string
+    localStorage.setItem('tarefas', tarefasJSON); // Local no navegador para salvar string, por isso o array foi transformado em sting com o JSON.stringfy
+}
+
+function adcionaTarefasSalvas() {
+   const tarefas = localStorage.getItem('tarefas');
+   const listaDeTarefas = JSON.parse(tarefas); //Tarefas voltam a ser array
+   
+   for (let tarefa of listaDeTarefas) {
+    criaTarefa(tarefa); // As Tarefas serão salvas no navegador
+   }
+}
+
+adcionaTarefasSalvas();
 
