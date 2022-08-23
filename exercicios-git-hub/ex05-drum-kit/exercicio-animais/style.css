@@ -1,22 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-
 }
-
 
 .botoes {
     width: 490px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    
-
-
-
-
 }
-
 
 .botao {
     height: 40px;
@@ -26,6 +18,9 @@
     color: black;
 }
 
-.img {
+div > .img {
   background-size: cover;
+  width: 400px;
+  height: 300px;
+  margin: 50px 50px 50px 50px;
 }
