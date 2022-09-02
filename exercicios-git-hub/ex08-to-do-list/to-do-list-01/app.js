@@ -19,7 +19,7 @@ const getBanco = () => JSON.parse(localStorage.getItem('todoList')) ?? [];
 //Function que vai atualizar os valores das tarefas que foram pegadas do banco pelo getItem
 const setBanco = (banco) => localStorage.setItem('todoList', JSON.stringify(banco));
 
-//**1º
+//1º
 //Function que recebe os argumentos para manipular o dom , o indice foi colocado por ultimo como na função atualizarTarefas
 const criarItem = (tarefa, status, indice) => {
     //crio o elemento
@@ -130,6 +130,6 @@ document.getElementById('newItem').addEventListener('keypress', inserirItem);
 
 //7º
 // Crio o evento de click na funcção clickItem
-document.getElementById('todoList').addEventListener('click', clickItem)
+document.getElementById('todoList').addEventListener('click', clickItem);
 
 atualizarTela();
