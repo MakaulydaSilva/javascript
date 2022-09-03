@@ -11,20 +11,23 @@
 <body>
     <h1>Qual minha casa em hogwarts?</h1>
     <p>Escolha duas pergutas da lista que mais combina com você. Para saber qual seria sua casa em hogwarts</p>
-    
-    <div class="1perg" id="1perg">
-        <button id="p1">Q</button>
-        Você se considera corajoso?
+
+    <label for="pergunta1">Você se considera corajoso?</label>
+    <select name="pergunta1" id="pergunta1" class="pergunta1">
+        <option value="">Escolha ...</option>
+        <option value="p1">Sim</option>
+        <option value="p2">Meio-termo</option>
+        <option value="p3">Não</option>
+    </select>
+
+    <p class="resposta" id="resposta">
+
+    </p>
+
+    <div class="suaCasa" id="suaCasa">
+
     </div>
 
-    <div class="4perg" id="4perg">
-        <button id="p4">D</button>
-        Você prefere dar mais valor as amizades do que a riqueza?
-    </div>
-   
-    <div class="resposta" id="resposta">
-
-    </div>
     <script src="script.js"></script>
 </body>
 
