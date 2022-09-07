@@ -6,8 +6,8 @@ function Pessoa(nome, sobrenome) {
 }
 
 // instância 
-const pessoa1 = new Pessoa('Luiz', 'O.'); // <- Pessoa = Função construtora
-const pessoa2 = new Pessoa('Maria', 'A.') // <- Pessoa = função construtora
+const pessoa1 = new Pessoa('Luiz', 'Olavo.'); // <- Pessoa = Função construtora
+const pessoa2 = new Pessoa('Maria', 'Ana.') // <- Pessoa = função construtora
 
 //Pessoa.prototype === pessoa1.__proto__
 
