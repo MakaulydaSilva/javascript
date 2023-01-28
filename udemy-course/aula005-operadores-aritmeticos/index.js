@@ -49,7 +49,9 @@ contador2 -= passo
 contador2 *= passo
 contador2 += passo // contador = contador + passo;
 
-//NaN - Not a Number
+//NaN - Not a Number, parseInt (inteiro), parsefloat(decimais)
 const num4 = 10;
-const num5 = 'Jeca';
+const num5 = Number('5.2'); //Com letras na string o Number não consegue fazer a conversão
 console.log(num4 ** num5);
+
+console.log(typeof num5);
