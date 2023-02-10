@@ -56,3 +56,13 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+
+.respostaBoa {
+  background-color: rgb(69, 201, 69);
+  padding: 10px 20px;
+}
+
+.respostaRuim {
+  background-color: rgb(240, 84, 84);
+  padding: 10px 20px;
+}
