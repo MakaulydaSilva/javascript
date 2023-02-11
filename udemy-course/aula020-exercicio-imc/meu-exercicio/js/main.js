@@ -19,6 +19,16 @@ function imc() {
 
         const calculoImc = peso.value / (altura.value * altura.value);
 
+        if(!calculoImc) {
+            isValid(false);
+            resposta.innerHTML = `insira dados válidos.`;
+            return;
+        }
+
+        if(calculoImc) {
+           resposta.classList.remove('respostaRuim');
+        }
+
         if (calculoImc < 18.5) {
             isValid(true);
             resposta.innerHTML = `Você está abaixo do peso.`;
@@ -34,12 +44,9 @@ function imc() {
         } else if (calculoImc >= 35 && calculoImc <= 39.9) {
             isValid(true);
             resposta.innerHTML = `Você está com obesidade grau 2.`;
-        } else if (calculoImc >= 40) {
+        } else if (calculoImc >= 40 ) {
             isValid(true);
             resposta.innerHTML = `Você está com obesidade grau 3.`;
-        } else {
-            isValid(false);
-            resposta.innerHTML = `insira dados válidos.`;
         }
     }
 
